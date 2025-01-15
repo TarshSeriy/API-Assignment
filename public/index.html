@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather, Currency, and Random Dog Image</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Weather, Currency, and Random Dog Image</h1>
+
+    <!-- Weather Section -->
+    <section id="weather">
+        <h2>Weather Information</h2>
+        <form id="weather-form">
+            <input type="text" id="city" placeholder="Enter city name" required>
+            <button type="submit">Get Weather</button>
+        </form>
+        <div id="weather-data"></div> <!-- This is where weather data and icon will be displayed -->
+    </section>
+
+    <!-- Currency Section -->
+    <section id="currency">
+        <h2>Currency Exchange Rates</h2>
+        <form id="currency-form">
+            <input type="text" id="base" placeholder="Enter base currency (e.g., USD)" required>
+            <button type="submit">Get Rates</button>
+        </form>
+        <div id="currency-data"></div>
+    </section>
+
+    <!-- Random Dog Image Section -->
+    <section id="random-dog">
+        <h2>Random Dog Image</h2>
+        <img id="dog-image" alt="Random Dog" />
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
