@@ -38,6 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p>Wind Speed: ${data.wind_speed} m/s</p>
                 <p>Country: ${data.country}</p>
             `;
+                console.log(data)
+                let map = L.map('map').setView([data.coordinates.lat, data.coordinates.lon], 13);
+
+                L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
             } else {
                 console.error('Failed to fetch weather data.');
             }
@@ -45,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error fetching weather data:', error);
         }
     };
+
 
 
     // Function to get currency exchange rates
